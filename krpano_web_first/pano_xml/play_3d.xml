@@ -1,0 +1,45 @@
+<krpano version="1.20.7" >
+
+    <include url="../pano_xml/showtext.xml"/>
+    <include url="../pano_xml/followmouse.xml"/>
+
+    <!-- grid preview pano -->
+    <preview type="grid(cube,64,64,512,0xCCCCCC,0xF6F6F6,0x999999);" />
+
+    <!-- view/fov settings -->
+    <view hlookat="0" vlookat="0" fovtype="VFOV" fov="90" fovmin="30" fovmax="150" />
+    <autorotate enabled="true" wait="2000" speed="-3.0" horizon="10.0" tofov="180.0"/>
+
+
+
+    <!--      DEFAULT PLACE MENU -->
+    <plugin name="manubar-connect"
+            devices="html5"
+            align="leftop" x="50" y="50"
+            width="400"
+            height="20"
+    />
+
+
+    <image type="SPHERE" >
+        <sphere url="../pano_bilder/strasse.jpg"/>
+    </image>
+
+
+
+
+    <layer name="play-tour-logo"
+           url="../pano_bilder/back_tour.png"
+           width="30"
+           height="30"
+           x="50%"
+           y="90%"
+           onhover="showtext(Back to Explore Tour);"
+           onclick="loadpano(main.xml)"
+    />
+
+
+
+
+
+</krpano>

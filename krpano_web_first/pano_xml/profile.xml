@@ -1,0 +1,130 @@
+<krpano>
+
+
+    <include url="../pano_xml/showtext.xml"/>
+    <include url="../pano_xml/followmouse.xml"/>
+    <!-- grid preview pano -->
+    <preview type="grid(cube,64,64,512,0xCCCCCC,0xF6F6F6,0x999999);" />
+
+    <!-- view/fov settings -->
+    <view hlookat="0" vlookat="0" fovtype="VFOV" fov="90" fovmin="30" fovmax="150" />
+    <autorotate enabled="true" speed="3.0" horizon="110.0" tofov="115.0"/>
+
+
+
+    <image>
+        <sphere url="../pano_bilder/strasse.jpg"/>
+    </image>
+
+
+    <events onresize="customresize();"/>
+
+    <action name="customresize">
+        trace('windowsize = ', stagewidth, 'x', stageheight);
+        trace('areasize = ', area.pixelwidth, 'x', area.pixelheight);
+
+        sub(plugin[default].width, stagewidth, 0);
+        sub(plugin[default].height, stageheight, 0);
+        div(x_strage,get(plugin[default].width),2);
+        div(y_strage,get(plugin[default].height),2);
+        trace(x_strage);
+
+    </action>
+
+
+
+    <layer type="container"
+           x="45%"
+           y="15%">
+        <layer name="play-logo"
+               url="../pano_bilder/myPic.jpg"
+               bgroundedge="5"
+
+               width="100"
+               height="100"
+
+               zorder="1"
+               onclick="loadpano(profile.xml);"
+        />
+
+    </layer>
+
+
+    <plugin name="profile"
+            devices="html5"
+            url="../pano_js/profile_js_txt.js"
+            x="40%" y="35%"
+            width="50"
+            height="20"
+            visible="true"
+            zorder="3"
+            bgcolor="0x675323"
+    />
+
+
+
+
+
+    <layer type="container" x="50"
+           y="90%">
+
+
+        <layer name="appl-st1"
+               type="text"
+               html="Available on the"
+               bg="false"
+               width="90"
+               height="50"
+               x="20"
+        />
+        <layer name="appl-st2"
+               type="text"
+               html=" App Store"
+               width="100"
+               height="30"
+               bg="false"
+               css="font-size:18px;font-weight: bold;"
+               bgcolor="0x189c43"
+               x="20"
+               y="20"
+        />
+        <layer name="app-st-logo"
+               type="image"
+               url="../pano_bilder/playStore_logo.png"
+               width="20"
+               height="20"
+        />
+    </layer>
+
+
+    <layer type="container"
+           x="50%"
+           y="90%">
+
+        <layer name="play-tour-logo"
+               url="../pano_bilder/play_tour.png"
+               width="30"
+               height="30"
+               onhover="showtext(Explore Tour);"
+               onclick="loadpano(play_3d.xml)"
+        />
+    </layer>
+
+
+    <layer type="container" x="450"
+           y="30%">
+        <layer name="play-logo"
+               url="../pano_bilder/back_tour.png"
+
+               width="30"
+               height="30"
+
+               onhover="showtext(profile here);"
+               onclick="showtext(profile);"
+        />
+
+    </layer>
+
+
+
+</krpano>

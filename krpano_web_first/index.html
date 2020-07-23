@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>krpano</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<link rel="stylesheet" href="pano_css/stylecss.css">
+
+	<style>
+		html { height:100%; }
+		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+	</style>
+</head>
+<body>
+
+	<div>
+		<div class="menu-inh">
+			<ul class="menu-ul">
+				<li class="menu-li" style="margin: 0 40px 0 40px; padding-top: 0;"><p >CODER </p></li>
+				<li class="menu-li"><a class="active" href="#home">EXPLORE</a></li>
+				<li class="menu-li"><a href="#news">STOCK</a></li>
+				<li class="menu-li"><a style="font-size: 10px;" href="#contact">WORLD MAP</a></li>
+				<li class="menu-li"><a style="font-size: 10px;" href="#about">COMMUNITY</a></li>
+				<li class="menu-li"><a href="#about">PRICING</a></li>
+				<li class="menu-li"><a href="#about">BLOG</a></li>
+				<li class="menu-li"><a href="https://github.com/Coder-Matheo" style="padding-top: 1px;" target="_blank">
+					<img id="github_img" src="pano_bilder/github_logo.png"  style="width: 35px; height: 35px;" alt=""></a></li>
+				<li class="menu-li" style="margin-right: 40px;margin-left: 40px;"><button  type="button">SING UP</button></li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+		document.getElementById("github_img").addEventListener("mouseover", function () {
+			document.getElementById("github_img").style.width = "38px";
+			document.getElementById("github_img").style.height = "38px";
+		});
+		document.getElementById("github_img").addEventListener("mouseout", function () {
+			document.getElementById("github_img").style.width = "35px";
+			document.getElementById("github_img").style.height = "35px";
+		});
+		document.getElementById("github_img").addEventListener("click", function () {
+
+
+		});
+
+	</script>
+
+
+
+<script src="krpano.js"></script>
+
+<div id="pano" style="width:100%;height:90%;">
+	<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;text-align:center;"><td>ERROR:<br><br>Javascript not activated<br><br></td></tr></table></noscript>
+	<script>
+		embedpano({swf:"krpano.swf", xml:"pano_xml/main.xml", target:"pano", html5:"auto", mobilescale:1.0, passQueryParameters:true});
+	</script>
+</div>
+
+</body>
+</html>

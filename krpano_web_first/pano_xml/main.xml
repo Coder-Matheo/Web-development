@@ -1,0 +1,178 @@
+﻿<krpano>
+
+	<include url="../pano_xml/showtext.xml"/>
+	<include url="../pano_xml/followmouse.xml"/>
+	<!-- grid preview pano -->
+	<preview type="grid(cube,64,64,512,0xCCCCCC,0xF6F6F6,0x999999);" />
+
+	<!-- view/fov settings -->
+	<view hlookat="0" vlookat="0" fovtype="VFOV" fov="90" fovmin="30" fovmax="150" />
+	<autorotate enabled="true" speed="3.0" horizon="110.0" tofov="115.0"/>
+
+
+
+	<image type="SPHERE" >
+		<sphere url="../pano_bilder/strasse.jpg"/>
+	</image>
+
+	<scene name="background-pic1">
+		<image type="SPHERE" >
+			<sphere url="../pano_bilder/strasse.jpg"/>
+		</image>
+	</scene>
+
+
+
+	<layer name="txt-h1"
+		   type="text"
+		   html="Virtual Tours Made Simple"
+		   height="50"
+		   width="500"
+		   bg="false"
+		   x="25%"
+		   y="30%"
+		   css="font-size:41px;color:gray;"
+	/>
+	<layer name="txt-p"
+		   type="text"
+		   html="World's most hassle-free 360VR piblishing and panoramic tours authoing platsform."
+		   height="20"
+		   width="500"
+		   css="font-size:12px;color:black;font-weight: bold;"
+		   bg="false"
+		   x="25%"
+		   y="40%"
+	/>
+	<layer name="btn-mid"
+		   type="text"
+		   html="GET STARTED"
+		   bgroundedge="5"
+		   width="120"
+		   height="40"
+		   bgcolor="0x289ce5"
+		   vcenter="true"
+		   css="text-align:center;font-weight: bold;border-radius: 25px;"
+		   x="30%"
+		   y="45%"
+		   onclick="set(plugin[social-plg].visible,true);set(plugin[close-win-social].visible,true);
+		   		set(layer[btn-mid].visible,false);set(layer[txt-p].visible,false);
+		   		set(layer[txt-h1].visible,false);"
+	/>
+
+
+
+	<layer name="close-win-social"
+		   url="../pano_bilder/close_img.png"
+		   width="30"
+		   height="30"
+		   x="30%" y="25%"
+		   visible="false"
+		   onclick="set(plugin[social-plg].visible,false);set(layer[btn-mid].visible,true);
+		   			set(layer[close-win-social].visible,false);set(layer[txt-p].visible,true);
+		   		set(layer[txt-h1].visible,true);"
+
+	/>
+
+	<plugin name="social-plg"
+			devices="html5"
+			url="../pano_js/social_js_fl.js"
+			align="leftop" x="30%" y="35%"
+			width="400"
+			height="20"
+			visible="false"
+			zorder="3"
+			bgcolor="0x675323"
+
+	/>
+
+
+	<layer type="container" x="3%"
+		   y="90%">
+
+
+		<layer name="appl-st1"
+			   type="text"
+			   html="Available on the"
+			   width="90"
+			   height="50"
+			   x="20"
+			   bg="false"
+			/>
+			<layer name="appl-st2"
+				   type="text"
+				   html=" App Store"
+				   width="100"
+				   height="30"
+				   bg="false"
+				   css="font-size:18px;font-weight: bold;"
+				   bgcolor="0x189c43"
+				   x="20"
+				   y="20"
+			/>
+			<layer name="app-st-logo"
+				   type="image"
+				   url="../pano_bilder/playStore_logo.png"
+				   width="20"
+				   height="20"
+			/>
+	</layer>
+
+
+	<layer type="container" x="50%"
+		   y="90%">
+		<layer type="text"
+			   height="10"
+			   width="10"
+			   y="-20"
+			   x="-25"
+			   bgroundedge="5"
+			   onhover="showtext(first)"
+			   onclick="loadscene(background-pic1);"
+		/>
+		<layer type="text"
+			   height="10"
+			   width="10"
+			   y="-20"
+			   x="10"
+			   bgroundedge="5"
+			   onhover="showtext(second)"
+		/>
+		<layer type="text"
+			   height="10"
+			   width="10"
+			   y="-20"
+			   x="45"
+			   bgroundedge="5"
+			   onhover="showtext(third)"
+		/>
+
+		<layer name="play-tour-logo"
+			   url="../pano_bilder/play_tour.png"
+			   width="30"
+			   height="30"
+
+			   onhover="showtext(Explore Tour);"
+			   onclick="loadpano(play_3d.xml)"
+		/>
+	</layer>
+
+
+	<layer type="container" x="90%"
+		   y="90%">
+		<layer name="play-logo"
+			   url="../pano_bilder/myPic_profile.jpg"
+			   bgroundedge="50"
+			   bgborder="1 white"
+			   width="30"
+			   height="30"
+
+			   onhover="showtext(profile);"
+			   onclick="loadpano(profile.xml);"
+		/>
+
+	</layer>
+
+
+
+
+</krpano>

@@ -1,0 +1,43 @@
+.menu-ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+
+}
+.menu-inh{
+    position: center;
+
+}
+.menu-li{
+    float: left;
+    position: center;
+    margin-left: 1px;
+    padding: 1px;
+    width: 80px;
+    height: 40px;
+
+}
+.menu-li a{
+    display: block;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu-li a:hover{
+    background-color: #111;
+}
+
+.menu-li button{
+    width: 80px;
+    height: 25px;
+    background-color: rgb(41, 156, 229);
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+
+}
