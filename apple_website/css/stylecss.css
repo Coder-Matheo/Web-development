@@ -1,0 +1,210 @@
+body{
+
+    margin: 0;
+}
+.menubar{
+    width: 774px;
+
+}
+.menu-el{
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #131313;
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+    margin: 0 auto 0 auto;
+    padding: 0 350px 0 20%;
+
+}
+.lst-menu{
+    float: left;
+    position: center;
+    margin: 0 auto 0 auto;
+}
+#mid-lst-menu{
+
+}
+
+.lst-menu a,input{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 12px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-decoration: none;
+
+}
+.notificationbar{
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    padding: 0;
+    margin-top: 10px;
+
+
+
+}
+.notif-txt{
+
+    width: 300px;
+    height: 100%;
+    font-size: 12px;
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+}
+.mainbar-inh{
+    border: red solid 3px;
+    width: 100%;
+    height: 400px;
+    background-color: #131313;
+}
+.main-txt-box{
+    border: darkblue solid 3px;
+    width: 200px;
+    position: center;
+    margin:40px auto 40px auto;
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+}
+.mainbar-txt,.mainbar-txth{
+    color: white;
+    width: 200px;
+    margin: 0;
+    text-align: center;
+    border: yellow solid 3px;
+}
+
+.main-img-box{
+    border: purple solid 3px;
+    height: 200px;
+    width: 800px;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.secondbar-alb{
+    width: 100%;
+    height: 400px;
+    margin-top: 0;
+    background-color: #FAFAFA;
+
+}
+.secondbar-inh{
+    border: red solid 3px;
+    width: 300px;
+    text-align: center;
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.second-img-lnk{
+    height: 20px;
+    width: 20px;
+    transform: rotate(-90deg);
+}
+
+.second-img-box{
+    border: purple solid 3px;
+    height: 200px;
+    width: 600px;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------------------------------*/
+.shopbar{
+    border: red solid 4px;
+    margin-left: 100px;
+
+}
+.shopbar-watch{
+    border: black solid 3px;
+    float: left;
+    text-align: center;
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+    width: 300px;
+}
+.shopbar-inh{
+    border: darkblue solid 3px;
+    width: 300px;
+
+}
+.shopbar-watch img{
+    border: blueviolet solid 3px;
+    width: 20px;
+    height: 20px;
+}
+.shopbar-watch-img img{
+    border: green solid 3px ;
+    width: 300px;
+    height: 200px;
+}
+/* ---------------------------------------*/
+.shopbar-airPods{
+    border: black solid 3px;
+    text-align: center;
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+    margin-right: 100px;
+    width: 300px;
+}
+.shopbar-inh-airPods{
+    border: darkblue solid 3px;
+    width: 300px;
+}
+.shopbar-airPods img{
+    border: brown solid 3px;
+    width: 20px;
+    height: 20px;
+}
+.shopbar-airPods-img img{
+    border: green solid 3px ;
+    width: 200px;
+    height: 200px;
+}
+
+.tvbar{
+    margin-top: 20px;
+    border: purple solid 3px;
+}
+.tvbar-inh{
+    border: green solid 3px;
+}
+.tv-img-box{
+    position: relative;
+    border: blue solid 3px;
+    text-align: center;
+
+}
+.tv-img-box a{
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+    color: black;
+    border: yellow solid 3px;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 200px;
+}
+
+.tv-txt-box{
+    border: red solid 3px;
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    margin-top: 60px;
+    font-weight: bold;
+    color: black;
+    padding-top: 0px;
+
+}
